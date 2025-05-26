@@ -14,7 +14,7 @@ jobs:
         name: Execução de Custom Action
         steps:
             - name: Adicionando Comentário
-              uses: ThiagoMSArrais/action-js@main
+              uses: thiagomsarrais/action-js@main
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}

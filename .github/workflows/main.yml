@@ -15,11 +15,12 @@ jobs:
         steps:
             - name: Adicionando Comentário
               id: comment_step
-              uses: thiagomsarrais/action-composite@main
+              uses: thiagomsarrais/action-docker@main
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}
                 comment: "Teste de comentário"
+                GITHUB_REPOSITORY: ${{ github.repository }}
             - name: Mostrar o id do comentário
               run: |
                 echo 'Id do comentário: ${{ steps.comment_step.outputs.comment-id }}'

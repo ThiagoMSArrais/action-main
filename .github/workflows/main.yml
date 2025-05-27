@@ -15,7 +15,7 @@ jobs:
         steps:
             - name: Adicionando Comentário
               id: comment_step
-              uses: thiagomsarrais/action-js@main
+              uses: thiagomsarrais/action-composite@main
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}

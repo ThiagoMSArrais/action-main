@@ -15,7 +15,7 @@ jobs:
         steps:
             - name: Adicionando Comentário
               id: comment_step
-              uses: thiagomsarrais/action-docker@v2.0.0
+              uses: thiagomsarrais/action-docker@v3.0.0
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}
